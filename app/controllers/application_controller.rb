@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
      
     def login
         session[:oauth] = Koala::Facebook::OAuth.new(APP_ID, APP_SECRET, SITE_URL + '/')
-        @auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"user_friends")  
+        @auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"read_stream")  
  
         redirect_to @auth_url
     end
@@ -49,7 +49,7 @@ end
   def getfriends
     @api = Koala::Facebook::API.new(session[:access_token])
 
-    @result = @api.get_connections("me","friends")
+    @result = @api.get_connections("me","likes")
  
     # @result.class
     # @result.first
