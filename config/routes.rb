@@ -6,6 +6,7 @@ AppMidiasSociais::Application.routes.draw do
   get '/login' => "application#login"
   get '/index' => "application#index"
   get '/getfriends' => "application#getfriends"
+  get '/delete' => "application#delete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
