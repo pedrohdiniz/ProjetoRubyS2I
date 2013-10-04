@@ -1,10 +1,10 @@
-<h1>Listing friends</h1>
+<h1>Listagem de amigos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Id friend</th>
+      <th>Nome</th>
+      <th>Id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= friend.name %></td>
         <td><%= friend.id_friend %></td>
-        <td><%= link_to 'Show', friend %></td>
-        <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
-        <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', friend %></td>
+        <td><%= link_to 'Editar', edit_friend_path(friend) %></td>
+        <td><%= link_to 'Apagar', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,6 +26,6 @@
 
 <br>
 
-<%= link_to 'New Friend', new_friend_path %>
+<%= link_to 'Novo Amigo', new_friend_path %>
 <a href="/delete">Logout</a>
 
